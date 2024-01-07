@@ -1,20 +1,13 @@
 
 
-.experience {
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
 .section-header {
     box-sizing: border-box;
-    padding-top: 1em;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
+    padding-top: 1.5em;
+    width: 100%;
+    text-align: start;
     border-bottom: 1px solid #000; /* Adjust color and thickness as needed */
-
+    font-weight: 400;
+    margin-bottom: 1em;
 }
 
 .experience-content {
@@ -24,19 +17,13 @@
 }
 
 .experience-row {
-    margin-top: 0.8em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     height: 10em;
-        /* background-color: antiquewhite; */
 
 }
 
 .experience-row .col {
-    margin-left: 2em;
-    margin-right: 2em;
       display: flex;
+      width: 30px;
   flex-direction: column;
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */

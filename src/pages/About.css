@@ -10,7 +10,6 @@
     letter-spacing: .8px;
     line-height: 25px;
     color: #000;
-    font-weight: 300;
 }
 
 .bio {
@@ -31,13 +30,11 @@
 
 
  .row {
-    padding-right: 2em;
-}
-/* 
-.div {
-    font-family: 'Roboto Mono', monospace;
-      /* font-family: Helvetica; Roboto Mono, Helvetica,Arial,sans-serif; */
+    margin-right: 1em;
+    padding-right: 1em;
+    border-right: 1px solid #000; /* Specify the width and color of the left border */
 
+}
 
 
 body, p {

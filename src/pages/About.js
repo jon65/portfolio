@@ -8,16 +8,19 @@ import {
 
 const About = () => {
   return (
+    <div>
+            <div id="about"></div>
     <div className="container about">
       <div className="section">
     <h2 className="header">
-      Hello there
+      Hello there 👋🏻
         </h2>
         <div className="bio">
           <div className="row">
             My name is Jonathan Yip and I am a final year Software Engineering Student. I 
           </div>
           <div className="links">
+            <h2>Socials</h2>
             <div className="d-flex align-items-start">
                             <a className="p-3"
                                 href={'./'}
@@ -68,6 +71,9 @@ const About = () => {
           </div>
         </div>
       </div>
+      </div>
+            <div id="experience"></div>
+
     </div>
   );
 };

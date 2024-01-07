@@ -1,17 +1,24 @@
 .Landing {
-    /* background-image: url('../assets/BLURbackground.jpg');    */
+    z-index: 1;
+      position: absolute;
+
+
+    /* background-image: url('../assets/codePen.png');    */
 	opacity: 0.8; /* Adjust the opacity as needed */
-    background-size: cover;  /* or 'contain' based on your preference */
+    /* background-size: contain;  or 'contain' based on your preference */
     background-position: center;
     background-repeat: no-repeat;
 	font-family: 'Poppins', sans-serif;
     display: flex;
-	background: #eee;
+	background: #e9ecef;
+  background: linear-gradient(to right, #e9ecef, #fff, #e9ecef);
+background: linear-gradient(to bottom, #e9ecef, #fff, #e9ecef);
+
 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 65vh;
     position: relative;
 		text-align: center;
 		padding: 0 2em;
@@ -26,12 +33,22 @@
         opacity: 0.6;
     }
 }
+
 p {
 	text-align: center;
 }
 
+.banner-logo {
+  z-index: 2;
+    position: absolute;
+}
 
-
+.banner-logo img {
+  width: 100px; /* Adjust the width as needed */
+  padding-bottom: 8em;
+  padding-left: 3em;
+  filter: grayscale(100%) brightness(100%);
+}
 
 .row1 {
   font-size: 3rem;

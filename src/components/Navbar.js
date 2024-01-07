@@ -21,26 +21,26 @@ const Navbar = () => {
   };
   
   return (
-    <motion.nav
-    initial="hidden"
-    animate={isVisible ? 'visible' : 'hidden'}
-    variants={navbarVariants}
-    style={{
-      padding: '10px',
-      position: 'fixed',
-      width: '100%',
-      zIndex: 1000,
-    }}
-    >
-    <nav className="navbar">
-      <div className="container">
-        {/* Your navigation links or logo go here */}
-<a href="/">Home</a>
-<a href="/about">About</a>
-<a href="/contact">Contact</a>
+    // <motion.nav
+    // initial="hidden"
+    // animate={isVisible ? 'visible' : 'hidden'}
+    // variants={navbarVariants}
+    // style={{
+    //   padding: '10px',
+    //   position: 'fixed',
+    //   width: '100%',
+    //   zIndex: 1000,
+    // }}
+    // >
+    /* </motion.nav> */
+    <div class="et-hero-tabs-container">
+      <a class="et-hero-tab" href="#about">About Me</a>
+      <a class="et-hero-tab" href="#education">Education</a>
+      <a class="et-hero-tab" href="#experience">Experience</a>
+      <a class="et-hero-tab" href="#tab-angular">Projects</a>
+      <a class="et-hero-tab" href="#tab-other">Contact</a>
+      <span class="et-hero-tab-slider"></span>
       </div>
-    </nav>
-    </motion.nav>
   );
 };
 

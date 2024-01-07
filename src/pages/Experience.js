@@ -6,12 +6,16 @@ const Experience = () => {
 
     return (
         <div>
-        <h2 class="section-header">
-                    Experience
+            <div className="container">
+            <h2 class="section-header">
+                    EXPERIENCE
                 </h2>
-            <div className="experience">
                 <div class="experience-content">
-                <div class="experience-row">
+
+                    <div>
+                        dsadsadsa
+                </div>
+                {/* <div class="d-flex flex-row .experience-row">
                     <div className="col">
                         <h3>
                             Silkron Technologies
@@ -32,9 +36,11 @@ const Experience = () => {
                     <p>
                         Mobile Application Engineer Intern | 2022 Sept - 2022 Dec
                     </p>
-                </div>
+                </div> */}
                 </div>
             </div>
+            <div id="education"></div>
+
         </div>
     );
 }

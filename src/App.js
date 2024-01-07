@@ -8,8 +8,8 @@ import Education from './pages/Education';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
       <Landing />
+      <Navbar />
       <About />
       <Experience />
       <Education/>
