@@ -1,0 +1,8 @@
+    .diamond {
+      width: 0;
+      height: 0;
+      border: 50px solid transparent; /* Adjust the size of the diamond */
+      border-bottom-color: blue; /* Background color of the diamond */
+      position: relative;
+      transform: translate(-50%, -50%);
+    }

@@ -1,0 +1,61 @@
+.about {
+    padding-top: 2em;
+    align-items: center;
+    display: flex;
+    justify-content: center;    
+}
+
+.about p body div {
+    font-size: 14px;
+    letter-spacing: .8px;
+    line-height: 25px;
+    color: #000;
+    font-weight: 300;
+}
+
+.bio {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-grow: 2;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+ .row {
+    padding-right: 2em;
+}
+/* 
+.div {
+    font-family: 'Roboto Mono', monospace;
+      /* font-family: Helvetica; Roboto Mono, Helvetica,Arial,sans-serif; */
+
+
+
+body, p {
+    font-weight: 400;
+    letter-spacing: .8px;
+    line-height: 25px;
+    color: black; /* You can also use 'white' or '#000' for black color */
+
+}
+
+
+.header {
+    font-size: 2em;
+    text-align: start;
+}
+
+.landing--social {
+  font-size: 35px;
+    color: black; /* You can also use 'white' or '#000' for black color */
+
+}
