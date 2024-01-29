@@ -4,3 +4,30 @@
     margin-left: 15%;
     margin-right: 15%;
 }
+
+.education-card {
+    display: flex;
+
+}
+
+.c1 {
+    flex: 1;
+}
+
+.c2 {
+    flex: 4;
+    align-self: center;
+    padding-left: 2em;
+}
+.c2 p {
+    text-align: start;
+    font-size: 1.1em;
+    color: black;
+}
+
+.c2 h3 {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: start;
+}

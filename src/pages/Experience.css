@@ -8,30 +8,59 @@
     border-bottom: 1px solid #000; /* Adjust color and thickness as needed */
     font-weight: 400;
     margin-bottom: 1em;
+    font-size: 1.5em;
 }
 
 .experience-content {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 100%;
 }
 
-.experience-row {
-    height: 10em;
 
+.experience-card {
+  /* background-color: #f0f0f0; */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  display: flex;  
 }
 
-.experience-row .col {
-      display: flex;
-      width: 30px;
-  flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  text-align: center; /* Optional: Center text */
+.col1 {
+    flex: 0.4;
+    align-self: center;
 }
 
-.experience-row img {
-    height: 5em;
-    /* background-color: antiquewhite; */
-    width: auto;
+.col2 {
+    flex: 2;
+}
+
+
+.title {
+  font-weight: bold;
+  font-size: 1em;
+  color: black;
+
+}
+.company {
+  
+}
+
+.date {
+  color: #555;
+  text-align: end;
+}
+
+.description {
+  margin-top: 10px;
+  text-align: start;
+  font-size: 0.8em;
+  color: #343a40;
+  font-weight: 400;
+}
+
+li {
+  padding: 0.5em;
 }

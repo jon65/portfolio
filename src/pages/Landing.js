@@ -15,7 +15,7 @@ const Landing = () => {
                 <div className="row1">
                     <ReusableSlideInWithFade backgroundColor="lightblue" duration={0.8}>
                     <h1>Hi!</h1>
-                    <Padding/>
+                    <Padding />
                     <h1>
                         I'm Jonathan,
                     </h1>
@@ -23,7 +23,7 @@ const Landing = () => {
             </div>
             <div className="row2">
                     <h3>
-                        <Typewriter textList={["Aspiring Software Engineer", "Rock Climbing Enthusiast"]} typingDelay={70} delDelay={20} wordDelay={1500}/>                    
+                        <Typewriter textList={["Aspiring Software Engineer", "Rock Climbing Enthusiast", "lifelong learner", "tech geek"]} typingDelay={70} delDelay={20} wordDelay={1500}/>                    
                     </h3>
             </div>
             <div className="banner-logo">

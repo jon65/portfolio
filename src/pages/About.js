@@ -5,25 +5,49 @@ import {
     FaGithub, FaLinkedin, FaEnvelope
 } from 'react-icons/fa';
 
+import resume from '../assets/prof_resume.pdf';
 
 const About = () => {
   return (
     <div>
-            <div id="about"></div>
-    <div className="container about">
+    <div className="container about" >
       <div className="section">
     <h2 className="header">
       Hello there 👋🏻
         </h2>
         <div className="bio">
           <div className="row">
-            My name is Jonathan Yip and I am a final year Software Engineering Student. I 
+              My name is Jonathan Yip and I am a final year Software Engineering Student.
+              I am passionate about Web development, DevOps and AI. 
+              <div className="row-doing">
+                <span className="">Currently I am:</span>
+                <ul className="row-pad">
+                  <li>
+                    Learning Deep Learning using tenserflow
+                  </li>
+                  <li>
+                    Looking for internship or part-time opportunities in software development. (please reach out)
+                  </li>
+                  <li>
+                    working on a project that can store and quickly share files without lengthy authentication.
+                </li>
+                </ul>
+              </div>
+             <div class="inline-container">
+            <p>Feel free to download my resume.</p>
+            <a href={resume} download='resume' target='_blank' rel='noreferrer'>
+                <button className="btn-1">
+                    Download CV
+                </button>
+            </a>
+        </div>
+
           </div>
           <div className="links">
             <h2>Socials</h2>
             <div className="d-flex align-items-start">
                             <a className="p-3"
-                                href={'./'}
+                                href="https://github.com/jon65"
                                 target='_blank'
                                 rel='noreferrer'
                             >
@@ -38,7 +62,7 @@ const About = () => {
             <div className="d-flex align-items-start">
               <a
                 className="p-3"
-                                href={'./'}
+                                href="https://www.linkedin.com/in/developerjy/"
                                 target='_blank'
                                 rel='noreferrer'
                             >
@@ -55,7 +79,6 @@ const About = () => {
             <div className="d-flex align-items-start">
               <a
                 className="p-3"
-                                href={'./'}
                                 target='_blank'
                                 rel='noreferrer'
                             >
@@ -72,8 +95,6 @@ const About = () => {
         </div>
       </div>
       </div>
-            <div id="experience"></div>
-
     </div>
   );
 };

@@ -4,13 +4,21 @@ body {
   /* font-family: "Century Gothic", 'Lato', sans-serif; */
 
 }
+
+.container-app {
+
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+
 #about, #education, #experience {
     padding-top: 30px; /* Adjust as needed */
 }
 
 h2 {
     font-weight: 400;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: start;
     padding: 0.5em;
     width: 60%;
@@ -58,4 +66,18 @@ body, p {
   to {
     transform: rotate(360deg);
   }
+}
+
+.footer {
+  font-weight: 300; /* or 100, 200, etc. */
+  font-size: 0.9em;
+  margin: 0.4em;
+} 
+
+.footer-container {
+  margin-bottom: 1.5em;
+}
+
+.App {
+  /* background-color: lightgrey; */
 }
