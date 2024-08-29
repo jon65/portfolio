@@ -13,7 +13,7 @@ const About = () => {
     <div className="container about" >
       <div className="section">
     <h2 className="header">
-      Hello there 👋🏻
+      Heyo 👋🏻 
         </h2>
         <div className="bio">
           <div className="row">

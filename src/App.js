@@ -13,20 +13,20 @@ function App() {
     <div className="App">
       <Landing />
       <Navbar />
-      <div className="container-app">
+      {/* <div className="container-app"> */}
       <About />
-      <Education/>
+      {/* <Education/>
       <Skills/>
       <Experience />
       <Project />
       <Contact />
-      </div>
-    <footer className="footer-container">
+      </div> */}
+    {/* <footer className="footer-container">
         <p className="footer">Fueled by coffee and big dreams ;D</p>
         <p className="footer">
           &copy; Jonathan Yip 2024
         </p>
-    </footer>
+    </footer> */}
     </div>
   );
 }
