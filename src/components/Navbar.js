@@ -37,8 +37,8 @@ const Navbar = () => {
       <a class="et-hero-tab" href="#about">About Me</a>
       <a class="et-hero-tab" href="#education">Education</a>
       <a class="et-hero-tab" href="#experience">Experience</a>
-      {/* <a class="et-hero-tab" href="#project">Projects</a> */}
-      {/* <a class="et-hero-tab" href="#contact">Contact</a> */}
+      <a class="et-hero-tab" href="#project">Projects</a>
+      <a class="et-hero-tab" href="#contact">Contact</a>
       <span class="et-hero-tab-slider"></span>
       </div>
   );

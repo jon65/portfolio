@@ -14,6 +14,7 @@
 /* Additional styles for button if necessary */
 .btn-1 {
     margin-left: 1.5em;
+    
 }
 
 .about {
@@ -27,7 +28,7 @@
 .about p body div {
   font-size: 0.8em;
     letter-spacing: .8px;
-    line-height: 25px;
+    /* line-height: 25px; */
     color: #000;
 }
 

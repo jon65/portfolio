@@ -22,7 +22,7 @@ import c from '../assets/skills/c.svg';
 import tailwind from '../assets/skills/tailwind.svg';
 import spark from '../assets/skills/spark.svg';
 import dart from '../assets/skills/dart.svg';
-
+import kubernetes from '../assets/skills/kubernetes.png';
 import './skills.css';
 const Skills = () => { 
 
@@ -42,6 +42,12 @@ const Skills = () => {
                     <img className="" src={docker} alt="" />
                     <h3>
                         Docker
+                    </h3>
+                </div>
+                     <div className="skill--box">
+                    <img className="" src={kubernetes} alt="" />
+                    <h3>
+                        Kubernetes
                     </h3>
                 </div>
                     <div className="skill--box">

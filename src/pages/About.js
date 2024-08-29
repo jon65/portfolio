@@ -9,7 +9,7 @@ import resume from '../assets/prof_resume.pdf';
 
 const About = () => {
   return (
-    <div>
+    <div id="about">
     <div className="container about" >
       <div className="section">
     <h2 className="header">
@@ -36,9 +36,8 @@ const About = () => {
              <div class="inline-container">
             <p>Feel free to download my resume.</p>
             <a href={resume} download='resume' target='_blank' rel='noreferrer'>
-                <button className="btn-1">
-                    Download CV
-                </button>
+           <button type="button" class="btn btn-dark btn-1">Download CV</button>
+
             </a>
         </div>
 
