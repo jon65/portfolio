@@ -26,10 +26,18 @@
 }
 
 .about p body div {
-  font-size: 0.8em;
-    letter-spacing: .8px;
-    /* line-height: 25px; */
+
     color: #000;
+    font-family: 'Roboto Mono', Helvetica, Arial, sans-serif;
+    font-size: 23px;
+    line-height: 1.78;
+    color: #000;
+     display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
 }
 
 .bio {
