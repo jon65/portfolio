@@ -6,7 +6,7 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 const Header = () => { 
 
   return (
-    <AppBar position="static" color="transparent" elevation={0}>
+    <AppBar position="sticky" color="transparent" elevation={0}>
       <Toolbar style={{ justifyContent: "space-between" }}>
         <Typography variant="h6" style={{ fontWeight: "bold" }}>
           JONNO.

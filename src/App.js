@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import Header from './components/Heading';
 import Footer from './components/Footer';
 import Landing from './pages/Landing';
@@ -15,9 +15,9 @@ function App() {
     <div className="App">
       <Header />
       <Landing />
-      <Experience />
-      <Education/>
-      <Footer />
+      {/* <Experience />
+      <Education/> */}
+      {/* <Footer /> */}
       {/* <Navbar />
       <div className="container-app"> 
       <About />

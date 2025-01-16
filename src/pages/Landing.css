@@ -17,6 +17,8 @@
 
 
 .Landing {
+    padding-left: 16px;
+  padding-right: 16px;
     z-index: 1;
       position: absolute;
 
@@ -39,7 +41,7 @@ background: linear-gradient(to bottom, #e9ecef, #fff, #e9ecef);
     height: 92vh;
     position: relative;
 		text-align: center;
-		padding: 0 2em;
+		/* padding: 0 2em; */
     h1 {
         font-size: 2.5rem;
         margin: 0;
