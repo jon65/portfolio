@@ -11,23 +11,24 @@ import Skills from './pages/Skills';
 function App() {
   return (
     <div className="App">
+      <Header />
       <Landing />
-      <Navbar />
-      {/* <div className="container-app"> */}
+      {/* <Navbar />
+      <div className="container-app"> 
       <About />
-      {/* <Education/>
+      <Education/>
       <Skills/>
       <Experience />
       <Project />
-      <Contact />
-      </div> */}
-    {/* <footer className="footer-container">
-        <p className="footer">Fueled by coffee and big dreams ;D</p>
-        <p className="footer">
-          &copy; Jonathan Yip 2024
-        </p>
-    </footer> */}
-    </div>
+     <Contact /> 
+      </div> 
+      <footer className="footer-container">
+         <p className="footer">Fueled by coffee and big dreams ;D</p>
+         <p className="footer">
+           &copy; Jonathan Yip 2024
+         </p>
+    </footer>  */}
+    </div >
   );
 }
 
