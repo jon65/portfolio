@@ -1,0 +1,15 @@
+
+
+.contact {
+    width: 60%;
+    text-align: start;
+}
+
+.submit-button {
+    width: 100%;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+}

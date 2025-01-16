@@ -1,88 +1,68 @@
-
-.inline-container {
-    display: flex;
-    align-items: center; /* This aligns children vertically in the center */
+/* Container for the entire about section */
+.about {
+    width: 80%;
+    align-items: flex-start;
+    font-family: 'Roboto Mono', Helvetica, Arial, sans-serif;
+    color: #000;
 }
 
+/* Bio section with the text content */
+.bio {
+    display: flex;
+    color: black;
+    margin-right: 2em;
+    font-size: 14px;
+}
+
+/* Links section with the socials */
+.links {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+}
+
+/* Flex container for social links */
+.social-link-row {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.landing--social {
+    font-size: 14px;
+    color: black;
+    margin-right: 10px;
+}
+
+/* Inline container for the resume button */
+.inline-container {
+    display: flex;
+    align-items: center;
+}
 
 .inline-container p {
-    padding: 0;
     margin: 0;
     color: black;
 }
 
-/* Additional styles for button if necessary */
 .btn-1 {
     margin-left: 1.5em;
 }
 
-.about {
-    /* padding-top: 2em; */
-    align-items: center;
-    display: flex;
-    justify-content: center; 
-       
-}
-
-.about p body div {
-  font-size: 0.8em;
+/* Body text styles */
+body, p {
     letter-spacing: .8px;
     line-height: 25px;
-    color: #000;
+    color: #6c757d;
 }
 
-.bio {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-grow: 2;
-    color: black;
-    /* font-family: 'Roboto Mono', monospace; */
-
-}
-
-
-.links {
-    display: flex;
-    flex-direction: column;
-}
-
-
-
- .row {
+/* Row styles */
+.row {
     margin-right: 1em;
     padding-right: 1em;
-    border-right: 1px solid #000; /* Specify the width and color of the left border */
-  font-size: 0.8em;
-
-}
-
-
-body, p {
-    font-weight: 400;
-    letter-spacing: .8px;
-    line-height: 25px;
-    color: #6c757d; /* You can also use 'white' or '#000' for black color */
-
-}
-
-
-.header {
-    padding-top: 1em; 
-    font-size: 1.5em;
+    border-right: 1px solid #000;
     text-align: start;
-
-}
-
-.landing--social {
-  font-size: 35px;
-    color: black; /* You can also use 'white' or '#000' for black color */
-
-}
-
-.row {
-    text-align: start;
-
 }
 
 .row-doing {
@@ -91,4 +71,31 @@ body, p {
 
 .row-pad {
     padding-top: 0.7em;
+}
+
+/* Header styles */
+.header {
+    padding-top: 1em;
+    text-align: start;
+    font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+   
+    /* Row styles */
+    .row {
+        margin-right: 1em;
+        padding-right: 1em;
+        border-right: 0 solid #000;
+        text-align: start;
+    }
+    .bio {
+        flex-direction: column; /* Remove margin on mobile */
+        width: 100%; /* Full width on mobile */
+        margin: 0;
+    }
+    .about {
+        width: 95%;
+    }
 }

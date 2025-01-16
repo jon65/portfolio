@@ -14,13 +14,16 @@ const Project = () => {
     <div class="card">
       <div class="card__image card__image--fence"></div>
       <div class="card__content">
-        <div class="card__title">BaLance</div>
-        <p class="card__text">As part of a full year project with other students, we developed a tool for assisting tutors to create well
-        balanced student groups. The application creates groups based on factors such as personality types, academic
-        performance, and commitment hours that can be uploaded as a CSV file. Additionally, students have the
-                    option to upload custom python scripts to perform personalised student groupings.
+        <div class="card__title">Nine Mans Morris</div>
+                  <p class="card__text">
+                    Made an online version of the board game Nine Mans Morris game using JavaFX. This game can be played
+among 2 players and includes a step by step walk through tutorial of the game.
                   </p>
-        <button class="btn btn--block card__btn">Button</button>
+                              <a href="https://github.com/jon65/Nine-Mans-Morris" target="_blank" rel="noopener noreferrer">
+
+                    <button type="button" class="btn btn-outline-secondary">View Repository</button>
+                    </a>
+
       </div>
     </div>
   </li>
@@ -28,9 +31,15 @@ const Project = () => {
     <div class="card">
       <div class="card__image card__image--river"></div>
       <div class="card__content">
-        <div class="card__title">Flex Grow</div>
-        <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
-        <button class="btn btn--block card__btn">Button</button>
+        <div class="card__title">Fire hotspot</div>
+                  <p class="card__text">
+Created a weather reporting simulation app detecting Australian fires. Processed incoming stream data in
+10-second batches, identifying fires, causes, and sources. Utilized PySpark, Apache Kafka, and MongoDB for
+data processing and storage, with visualization via matplotlib and geomap. Enabled live climate data display,
+                    charts, and a geomap of recorded fires.                  </p>
+            <a href="https://github.com/jon65/SparkStreaming_fire_hotspots_datapipeline" target="_blank" rel="noopener noreferrer">
+                  <button type="button" class="btn btn-outline-secondary">View Repository</button>
+                  </a>
       </div>
     </div>
   </li>
@@ -38,9 +47,14 @@ const Project = () => {
     <div class="card">
       <div class="card__image card__image--record"></div>
       <div class="card__content">
-        <div class="card__title">Flex Shrink</div>
-        <p class="card__text">This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.</p>
-        <button class="btn btn--block card__btn">Button</button>
+        <div class="card__title">CampsideReview</div>
+                  <p class="card__text">
+A full stack web application for posting reviews on campsites around the world. Users can rate an existing
+campsite, leave their own reviews and upload a new campsite together with their review if the campsite does
+not exist                  </p>
+                  <a href="https://github.com/jon65/CampsideReview" target="_blank" rel="noopener noreferrer">
+                  <button type="button" class="btn btn-outline-secondary">View Repository</button>
+</a>
       </div>
     </div>
   </li>
@@ -48,9 +62,17 @@ const Project = () => {
     <div class="card">
       <div class="card__image card__image--flowers"></div>
       <div class="card__content">
-        <div class="card__title">Flex Basis</div>
-        <p class="card__text">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property."</p>
-        <button class="btn btn--block card__btn">Button</button>
+        <div class="card__title">BaLance</div>
+                  <p class="card__text">
+As part of a full year project with other students, we developed a tool for assisting tutors to create well
+        balanced student groups. The application creates groups based on factors such as personality types, academic
+        performance, and commitment hours that can be uploaded as a CSV file. Additionally, students have the
+                    option to upload custom python scripts to perform personalised student groupings.
+                  </p>
+                                    <a href="https://github.com/Monash-FIT3170/BaLance-Team-Forming-Dashboard?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">
+
+                    <button type="button" class="btn btn-outline-secondary">View Repository</button>
+                    </a>
       </div>
     </div>
   </li>
