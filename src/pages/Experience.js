@@ -1,83 +1,100 @@
-
-import React from 'react';
+import React from "react";
+import { Box, Typography, Container, Grid } from "@mui/material";
 import './Experience.css';
-import silkron from '../assets/silkron.png';
-import mmc from '../assets/mmc.jpeg';
-const Experience = () => { 
 
-    return (
-        <div id="experience">
-            <div className="container">
-            <h2 class="section-header">
-                    EXPERIENCE
-                </h2>
-                <div class="experience-card">
-                    <div class="col1"> 
-                        <img src={silkron} alt="" width="100px"/>
-                    </div>
-                    <div class="col2">
-                        <p class="date">Sept 2022 - Dec 2022</p>
-                                            <div class="title">Software Engineer Intern | Silkron</div>
+const experiences = [
+  {
+    title: "Frontend Engineer (Remote)",
+    company: "Selfbook / US - New York",
+    dates: "Jul 2021 - Present",
+    details: [
+      "Developing screens and UI components for the web application using React and Tailwind.",
+      "Fixing UI issues and integrating backend APIs with Redux Saga.",
+    ],
+  },
+  {
+    title: "Software Developer (Remote)",
+    company: "Wezov / Italy",
+    dates: "Jun 2021 - Present",
+    details: [
+      "Developing mobile and web applications using React and React Native.",
+      "Developing web scraping bots using Python and Selenium.",
+      "Helping with PHP backend tasks and occasionally working with different programming languages.",
+      "Consulting on frontend tech stack and integrating multiple external APIs across all platforms.",
+    ],
+  },
+  {
+    title: "Frontend Engineer (Contractor)",
+    company: "FreeBeings",
+    dates: "Mar 2021 - Aug 2021",
+    details: [
+      "Working on web applications and occasionally leading the development team.",
+      "Using React and integrating external APIs with the HIVE blockchain.",
+    ],
+  },
+  {
+    title: "Frontend Developer (In Office)",
+    company: "TDF / Algeria",
+    dates: "Feb 2021 - Mar 2021",
+    details: [
+      "Made landing pages and web applications collaborating with the back-end engineers of the team.",
+      "Convert designs into real-world applications and pages using multiple front-end technologies.",
+    ],
+  },
+  {
+    title: "Frontend Engineer (Freelance)",
+    company: "Upwork",
+    dates: "May 2021 - Aug 2021",
+    details: [
+      "Successfully completed numerous frontend jobs and high availability projects for clients.",
+      "Received 5-star ratings and great feedback, leading to a top-rated badge.",
+    ],
+  },
+  {
+    title: "Software Developer (Remote)",
+    company: "Shoppy",
+    dates: "Nov 2018 - Mar 2020",
+    details: [
+      "Worked on various client-side dashboard and payment components from designs and site features using Vue and Nuxt.",
+      "Integrated backend APIs.",
+    ],
+  },
+];
 
-                        <div class="description">
-                            <ul>
-                            <li>
-Was responsible for transitioning a mobile app for interacting with automated retail machines to Flutter
-3.0, focusing on enhancing performance and reliability. This involved integrating new libraries, reducing
-software bloat, and improving code modularity. My efforts led to a notably improved user experience,
-while ensuring scalability and simplifying future maintenance.
-                            </li>
-                            <li>
-Implemented API integration including an employee points-based payment system on a mobile app for
-client vending machines, designed specifically for employee use.
-                            </li>
-                            <li>
-                             Resolved software bugs in various mobile applications for the company's clients.
+const ExperiencePage = () => {
+  return (
+    <Container style={{ color: "white", paddingTop: "40px", maxWidth: "800px" }}>
+      <Typography variant="h4" style={{ fontWeight: "bold", marginBottom: "20px" }}>
+        EXPERIENCE
+      </Typography>
+      {experiences.map((experience, index) => (
+        <Box key={index} style={{ marginBottom: "40px" }}>
+          <Grid container justifyContent="space-between" alignItems="center">
+            <Grid item>
+              <Typography variant="h6" style={{ fontWeight: "bold" }}>
+                {experience.title}
+              </Typography>
+              <Typography variant="body2" style={{ fontStyle: "italic" }}>
+                {experience.company}
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="body2" style={{ textAlign: "right" }}>
+                {experience.dates}
+              </Typography>
+            </Grid>
+          </Grid>
+          <Box style={{ marginTop: "10px", marginLeft: "20px" }}>
+            {experience.details.map((detail, detailIndex) => (
+              <Typography key={detailIndex} variant="body2" style={{ marginBottom: "5px" }}>
+                - {detail}
+              </Typography>
+            ))}
+          </Box>
+        </Box>
+      ))}
+    </Container>
+  );
+};
 
-                            </li>
-                            <li>
-                            Implemented other client requested features such as UI changes, adding new language translation and
-                            data analytics.
-                            </li>
-                            <li>
-                                Perform unit tests on new features
-                            </li>
-                            </ul>
-                    </div>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <div class="col1"> 
-                        <img src={mmc} alt="" width="200px"/>
-                    </div>
-                    <div class="col2">
-                        <p class="date">Jan 2022 - Feb 2022</p>
-                                            <div class="title">IT Support Intern | Mahkota Medical Centre</div>
-
-                        <div class="description">
-                            <ul>
-                                <li>
-
-                                 Conducted SQL-driven data reporting on hospital operations, delivering key business insights.
-                                </li>
-                            <li>
-                                Developed an Excel plugin script to automate recurring queries for the IT department, enhancing
-                                efficiency and productivity.
-                            </li>
-                            <li>
-                                Identified data irregularities in organisations' data warehouse.
-                            </li>
-                            <li>
-                                Performed usability testing for new software integration
-                            </li>
-                            </ul>
-
-                    </div>
-                    </div>
-                </div>
-            </div>                
-        </div>
-    );
-}
-
-export default Experience;
+export default ExperiencePage;

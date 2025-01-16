@@ -1,42 +1,43 @@
-// import Typewriter from "../Typewriter";
-// import myPicProfessional from './assets/myPicProfessional.jpeg';
-import ReusableSlideInWithFade from '../animation/ReusableSlideInWithFade';
-import FadeIn from '../animation/FadeIn';
-import './Landing.css';
-import Typewriter from '../animation/Typewriter';
-import Padding from '../components/Padding';
-import Risograph from '../components/Risograph';
-import codePen from '../assets/codePen.png';
+import React from "react";
+import { Container, Typography } from "@mui/material";
+import "./Landing.css";
 
-const Landing = () => { 
+const Landing = () => {
+  return (
+      <div className="full-page-container">
+          <div id="net"></div>
 
-    return (
-        <div>
-            
-        </div>
-    );
 
-    // return (
-    //     <div className="Landing" id="Landing">
-    //             <div className="row1">
-    //                 <ReusableSlideInWithFade backgroundColor="lightblue" duration={0.8}>
-    //                 <h1>Hi!</h1>
-    //                 <Padding />
-    //                 <h1>
-    //                     I'm Jonathan,
-    //                 </h1>
-    //                 </ReusableSlideInWithFade>
-    //         </div>
-    //         <div className="row2">
-    //                 <h3>
-    //                     <Typewriter textList={["Aspiring Software Engineer", "Rock Climbing Enthusiast", "lifelong learner", "tech geek"]} typingDelay={70} delDelay={20} wordDelay={1500}/>                    
-    //                 </h3>
-    //         </div>
-    //         <div className="banner-logo">
-    //             <img src={ codePen} alt="" />
-    //         </div>
-    //     </div>
-    // );
-}
+  <Container
+  style={{
+    textAlign: "center",
+    color: "white",
+    display: "flex", // Use Flexbox
+    flexDirection: "column", // Align items in a column
+                  justifyContent: "center", // Center vertically
+        maxWidth: "70%", // Limit the width to 70% of the screen
+    maxHeight: "50%", // Limit the height to 70% of the screen
+    alignItems: "left", // Center horizontally
+    height: "100vh", // Full height of the viewport
+  }}
+>
+  <Typography variant="h6">Hey, I'm</Typography>
+  <div className="name-title">Jonathan Yip</div>
+  <Typography
+    variant="body1"
+                  style={{
+      marginTop: "20px",
+      maxWidth: "600px",
+      lineHeight: "1.8",
+    }}
+  >
+    I'm a software engineer based in Melbourne, Australia. I enjoy creating web
+    applications, mobile apps, and automating processes. Let's build something amazing
+    together!
+  </Typography>
+</Container>
+    </div>
+  );
+};
 
 export default Landing;

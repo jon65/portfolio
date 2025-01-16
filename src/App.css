@@ -1,12 +1,51 @@
-
-body {
-    /* font-family: Roboto Mono, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.78;
-    color: #000; */
-  /* font-family: "Century Gothic", 'Lato', sans-serif; */
+/* Ensure html and body fill the viewport */
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  font-family: "Poppins", sans-serif;
 }
+
+
+h1 {
+  font-family: "Open Sans", serif;
+  font-weight: 700;
+  font-size: 212px;
+}
+
+/* Root React container */
+#root {
+  height: 100%; /* Full height for React app */
+  display: flex;
+  flex-direction: column;
+}
+
+/* The main app wrapper */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push content to the top and bottom */
+  min-height: 100vh; /* Ensure it always fills the height of the screen */
+  color: white;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons with hover effects */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
 /* 
 .container-app {
 
