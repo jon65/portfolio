@@ -6,7 +6,7 @@ import Experience from './pages/Experience';
 import Education from './pages/Education';
 import Project from './pages/Project';
 import Skills from './pages/Skills';
-import Contact from './pages/Contact';
+// import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Education/>
       <Experience />
       <Project />
-      <Contact />
+      {/* <Contact /> */}
       </div>
     <footer className="footer-container">
         <p className="footer">Fueled by coffee and big dreams ;D</p>
