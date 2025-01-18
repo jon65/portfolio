@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <footer style={styles.footerContainer}>
-      <p style={styles.footerText}>Fueled by coffee and big dreams ;D</p>
-      <p style={styles.footerText}>&copy; Jonathan Yip 2024</p>
+      <p style={styles.footerText}>☀︎ Designed & Developed ☀︎</p>
+      <p style={styles.footerText}>Fueled by coffee and big dreams :D</p>
     </footer>
   );
 };

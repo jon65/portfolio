@@ -1,4 +1,3 @@
-import './TopNavbar.css';
 
 import { AppBar, Toolbar, Typography, IconButton, Button } from "@mui/material";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
@@ -12,9 +11,11 @@ const TopNavbar = () => {
           JONNO.
         </Typography>
         <div>
+          <Button color="inherit">Home</Button>
+          <Button color="inherit">About</Button>
           <Button color="inherit">Projects</Button>
-          <Button color="inherit">Resume</Button>
           <Button color="inherit">Contact</Button>
+
           <IconButton color="inherit">
             <Brightness4Icon />
           </IconButton>

@@ -1,115 +1,93 @@
-// About.js
-import React from 'react';
+import React, { useState} from 'react';
 import './About.css';
-import {
-    FaGithub, FaLinkedin, FaEnvelope
-} from 'react-icons/fa';
-import { motion } from 'framer-motion';
-
-import resume from '../assets/prof_resume.pdf';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import TopNavbar from '../components/TopNavbar';
+import space from '../assets/space.png';
 
 const About = () => {
+    const [selectedExperience, setSelectedExperience] = useState(null);
+  const [isSidecardOpen, setIsSidecardOpen] = useState(false);
+
+  const handleCardClick = (experience) => {
+    setSelectedExperience(experience);
+    setIsSidecardOpen(true);
+  };
+
+  const handleCloseSidecard = () => {
+    setIsSidecardOpen(false);
+  };
+  const experiences = [
+    {
+      title: 'Frontend Web Developer',
+      company: 'Company Name here',
+      location: 'Bengaluru',
+      type: 'Full Time',
+      duration: 'Sep 2021 - Dec 2021',
+    },
+    {
+      title: 'Internship',
+      company: 'Company Name here',
+      location: 'Bengaluru',
+      type: 'Internship',
+      duration: 'Sep 2021 - Dec 2021',
+    },
+  ];
+
   return (
-    <div className="about">
-      <TopNavbar/> 
-    <div className="container" >
-      <div className="">
-          <div>
-            
+    
+    <div className="about-container">
+      <div className={`backdrop ${isSidecardOpen ? "active" : ""}`} onClick={handleCloseSidecard}></div>
+      <TopNavbar />
+      <div className="about-content">
+        <div className="about-section">
+          <div className="about-text">
+            <h3>About Me</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quisquam temporibus voluptatibus repellat et obcaecati adipisci.
+          </div>
+          <div className="about-image">
+            <img src={space} alt="Space scene" />
+          </div>
         </div>
-      </div>
-      <div>
-dasdas
-      </div>
+
+        {/* Experience Section */}
+     <section className="experience-section">
+        <h2>Experience</h2>
+        <div className="experience-cards">
+          {experiences.map((experience, index) => (
+            <div
+              key={index}
+              className="experience-card"
+              onClick={() => handleCardClick(experience)}
+            >
+              <div className="experience-header">
+                <h4>{experience.title}</h4>
+                <span className="experience-type">{experience.type}</span>
+              </div>
+              <p className="experience-company">{experience.company}</p>
+              <p className="experience-duration">{experience.duration}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Sidecard */}
+      <div className={`sidecard ${isSidecardOpen ? "open" : ""}`}>
+        <button className="close-btn" onClick={handleCloseSidecard}>
+          &times;
+        </button>
+        {selectedExperience && (
+          <div className="sidecard-content">
+            <h3>{selectedExperience.title}</h3>
+            <h4>{selectedExperience.company}</h4>
+            <p>{selectedExperience.duration}</p>
+            <p>{selectedExperience.details}</p>
+          </div>
+        )}
       </div>
     </div>
-
+    </div>
   );
 };
 
 export default About;
-
-    //   <div className="section">
-    // <h2 className="header">
-    //   Heyo 👋🏻 
-    //     </h2>
-    //     <div className="bio">
-    //       <div className="row">
-    //           My name is Jonathan Yip and I am a final year Software Engineering Student.
-    //           I am passionate about Web development, DevOps and AI. 
-    //           <div className="row-doing">
-    //             <span className="">Currently I am:</span>
-    //             <ul className="row-pad">
-    //               <li>
-    //                 Learning Deep Learning using tenserflow
-    //               </li>
-    //               <li>
-    //                 Looking for internship or part-time opportunities in software development. (please reach out)
-    //               </li>
-    //               <li>
-    //                 working on a project that can store and quickly share files without lengthy authentication.
-    //             </li>
-    //             </ul>
-    //           </div>
-    //          <div class="inline-container">
-    //         <p>Feel free to download my resume.</p>
-    //         <a href={resume} download='resume' target='_blank' rel='noreferrer'>
-    //        <button type="button" class="btn btn-dark btn-1">Download CV</button>
-
-    //         </a>
-    //     </div>
-
-    //       </div>
-    //       <div className="links">
-    //         <h2>Socials</h2>
-    //         <div className="d-flex align-items-start">
-    //                         <a className="p-3"
-    //                             href="https://github.com/jon65"
-    //                             target='_blank'
-    //                             rel='noreferrer'
-    //                         >
-    //                             <FaGithub
-                                
-    //                                 className='landing--social className="p-2 flex-fill"'
-    //                                 aria-label='GitHub'
-    //           />
-    //           </a>
-    //           <div className="p-3">Github</div>
-    //         </div>
-    //         <div className="d-flex align-items-start">
-    //           <a
-    //             className="p-3"
-    //                             href="https://www.linkedin.com/in/developerjy/"
-    //                             target='_blank'
-    //                             rel='noreferrer'
-    //                         >
-    //             <FaLinkedin
-                  
-    //                                 className='landing--social'
-    //                                 aria-label='GitHub'
-    //           />
-    //           </a>
-    //           <div className="p-3">
-    //           Linkedin
-    //           </div>
-    //         </div>
-    //         <div className="d-flex align-items-start">
-    //           <a
-    //             className="p-3"
-    //                             target='_blank'
-    //                             rel='noreferrer'
-    //                         >
-    //                             <FaEnvelope
-    //                                 className='landing--social'
-    //                                 aria-label='GitHub'
-    //           />
-    //           </a>
-    //           <div className="p-3">
-    //             xinquanyip@gmail.com
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
