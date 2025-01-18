@@ -15,16 +15,15 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Landing = () => {
   return (
-    <div className="full-page-container">
         <Box sx={{ px: 4 }}> {/* px = 4 means 32px padding on left and right */}
 
   <Grid2 container sx={{ flexGrow: 1 }}>
     <Grid2 size={12}>
-            <Typography h6 style={{ textAlign: "left" }}>Hey, I'm</Typography>
-            <Typography style={{ textAlign: "left" }}>
+            <Typography h6 style={{ textAlign: "left", fontSize: "18"  }}>Hey, I'm</Typography>
+            <Typography className="name-title" style={{ textAlign: "left", fontSize: "120px"}}>
               Jonathan Yip
             </Typography>
-            <Typography style={{ textAlign: "left" }}>
+            <Typography style={{ textAlign: "left", fontSize: "18" }}>
     I'm a software engineer based in Melbourne, Australia. I enjoy creating web
      applications, mobile apps, and automating processes. Let's build something amazing
      together! 
@@ -32,8 +31,6 @@ const Landing = () => {
     </Grid2>
         </Grid2>
         </Box>
-</div>
-
   );
 };
 

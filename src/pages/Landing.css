@@ -6,7 +6,8 @@
   color: transparent; /* Gradient effect */
   margin: 0;
   line-height: 1;
-  font-size: 160px;
+    font-size: 100px;
+
 }
 #net{
   width: 100%;
@@ -70,14 +71,6 @@ p {
   filter: grayscale(100%) brightness(100%);
 }
 
-.name-title {
-  font-family: "Open Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
 
 .row1 {
   /* font-size: 3rem; */
