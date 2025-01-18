@@ -1,12 +1,24 @@
 /* Container for the entire about section */
 .about {
-    width: 80%;
+  height: 90vh; /* 100% of the viewport height */
     align-items: flex-start;
     font-family: 'Roboto Mono', Helvetica, Arial, sans-serif;
     color: #000;
 }
 
-/* Bio section with the text content */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.container > div:first-child {
+  flex: 7; /* 70% width */
+}
+
+.container > div:last-child {
+  flex: 3; /* 30% width */
+}
+/* Bio section with the text content 
 .bio {
     display: flex;
     color: black;
@@ -26,7 +38,6 @@
 .social-link-row {
     display: flex;
     align-items: center;
-    margin-top: 0.5em;
 }
 
 .landing--social {
@@ -75,7 +86,6 @@ body, p {
 
 /* Header styles */
 .header {
-    padding-top: 1em;
     text-align: start;
     font-size: 14px;
 }
@@ -98,4 +108,4 @@ body, p {
     .about {
         width: 95%;
     }
-}
+} 

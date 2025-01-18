@@ -6,11 +6,15 @@ import './Landing.css';
 import Typewriter from '../animation/Typewriter';
 import Padding from '../components/Padding';
 import Risograph from '../components/Risograph';
-import codePen from '../assets/codePen.png';
+import coding from '../assets/coding.png';
+import Socials from "../components/Socials";
+import { motion } from 'framer-motion';
+import Navbar from '../components/Navbar';
 
 const Landing = () => { 
 
     return (
+       
         <div className="Landing" id="Landing">
             
                 <div className="row1">
@@ -28,9 +32,13 @@ const Landing = () => {
                     </h3>
             </div>
             <div className="banner-logo">
-                <img src={ codePen} alt="" />
+                <img src={coding} alt="" />
+                      <Socials />
+
             </div>
-        </div>
+                          <Navbar />
+
+            </div>
     );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,11 +12,12 @@ const Navbar = () => {
 
   return (
     <motion.div
-        initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.5 }}
-      className="navbar">
+      initial={{ y: +80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.5 }}
+      className="navbar"
+    >
       {/* Hamburger Icon */}
       <div className="hamburger" onClick={toggleMenu}>
         <div className={`line ${isOpen ? "open" : ""}`}></div>
@@ -26,24 +28,24 @@ const Navbar = () => {
       {/* Sidebar Menu */}
       <div className={`et-hero-tabs-container ${isOpen ? "open" : ""}`}>
         {/* Cancel Button */}
-        <span className="cancel-button" onClick={toggleMenu}>
+        {/* <span className="cancel-button" onClick={toggleMenu}>
           &times;
-        </span>
-        <a className="et-hero-tab" href="#about">
-          About Me
-        </a>
-        <a className="et-hero-tab" href="#education">
+        </span> */}
+        <Link className="et-hero-tab" to="/about" onClick={toggleMenu}>
+          About
+        </Link>
+        <Link className="et-hero-tab" to="/education" onClick={toggleMenu}>
           Education
-        </a>
-        <a className="et-hero-tab" href="#experience">
+        </Link>
+        <Link className="et-hero-tab" to="/experience" onClick={toggleMenu}>
           Experience
-        </a>
-        <a className="et-hero-tab" href="#projects">
+        </Link>
+        <Link className="et-hero-tab" to="/projects" onClick={toggleMenu}>
           Projects
-        </a>
-        <a className="et-hero-tab" href="#contact">
+        </Link>
+        <Link className="et-hero-tab" to="/contact" onClick={toggleMenu}>
           Contact
-        </a>
+        </Link>
       </div>
     </motion.div>
   );
