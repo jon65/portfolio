@@ -12,6 +12,7 @@ const Landing = () => {
 
     return (
         <div className="Landing" id="Landing">
+            
                 <div className="row1">
                     <ReusableSlideInWithFade backgroundColor="lightblue" duration={0.8}>
                     <h1>Hi!</h1>

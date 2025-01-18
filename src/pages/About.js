@@ -4,12 +4,18 @@ import './About.css';
 import {
     FaGithub, FaLinkedin, FaEnvelope
 } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 import resume from '../assets/prof_resume.pdf';
 
 const About = () => {
   return (
-    <div id="about">
+    <motion.div
+        initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      id="about">
     <div className="container about" >
       <div className="section">
     <h2 className="header">
@@ -94,7 +100,7 @@ const About = () => {
         </div>
       </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

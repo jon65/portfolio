@@ -1,26 +1,27 @@
 /* Default Navbar Styles */
 .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.et-hero-tabs-container {
-    display: flex;
-    flex-direction: row;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar container styles */
+.et-hero-tabs-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: 5em;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 10;
-    transition: all 0.3s ease;
 }
 
 .et-hero-tab {
@@ -28,29 +29,40 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-    color: #000;
-    letter-spacing: 0.1rem;
-    transition: all 0.5s ease;
+    color: #333;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    padding: 0 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .et-hero-tab:hover {
-    color: white;
-    background: #6c757d;
-    transition: all 0.5s ease;
+    color: #fff;
+    background-color: #6c757d;
 }
 
 /* Hamburger Icon */
 .hamburger {
+    position: absolute;
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    padding: 10px;
+    padding: 0.5em;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
 }
 
 .hamburger .line {
     width: 25px;
     height: 3px;
-    background-color: #000;
+    background-color: #333;
     margin: 4px 0;
     transition: all 0.3s ease;
 }
@@ -71,35 +83,65 @@
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Responsive Styles */
+/* Sidebar Menu for Mobile */
 @media (max-width: 768px) {
-    .et-hero-tabs-container {
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        width: 100%;
-        height: auto;
-        background: #fff;
-        box-shadow: none;
-        display: none;
-    }
-
-    .et-hero-tabs-container.open {
-        display: flex;
-    }
-
-    .et-hero-tab {
-        padding: 10px;
-        text-align: center;
-        width: 100%;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .et-hero-tab-slider {
-        display: none;
-    }
-
     .hamburger {
         display: flex;
     }
+
+    .et-hero-tabs-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        padding: 2em 1em;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .et-hero-tabs-container.open {
+        right: 0;
+    }
+
+    .et-hero-tab {
+        width: 100%;
+        padding: 1em 1.5em;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+    }
+
+    .et-hero-tab:last-child {
+        border-bottom: none;
+    }
+
+    .et-hero-tab:hover {
+        background-color: #f7f7f7;
+    }
+
+    /* Cancel Button */
+    .cancel-button {
+        display: block;
+        margin-left: auto;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .cancel-button:hover {
+        color: #6c757d;
+    }
+}
+
+/* Smooth slider visibility */
+.et-hero-tab-slider {
+    display: none;
 }
