@@ -35,14 +35,14 @@ const About = () => {
   ];
 
   return (
-    
+    <div>
+      <TopNavbar />
     <div className="about-container">
       <div className={`backdrop ${isSidecardOpen ? "active" : ""}`} onClick={handleCloseSidecard}></div>
-      <TopNavbar />
       <div className="about-content">
         <div className="about-section">
           <div className="about-text">
-            <h3>About Me</h3>
+            <h2>About Me</h2>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quisquam temporibus voluptatibus repellat et obcaecati adipisci.
           </div>
           <div className="about-image">
@@ -68,9 +68,26 @@ const About = () => {
               <p className="experience-duration">{experience.duration}</p>
             </div>
           ))}
-        </div>
+          </div>
+          
       </section>
+    
+        {/* Education Section */}
+        <section className="education-section">
+        <h2>Education</h2>
+        <div className="education-cards">
+        
+              <div className="education-header">
+                <h6>Monash University</h6>
+            </div>
+            <div className="education-content">
 
+                <span className="education-type">Bachalor of Engineering (Honours) Software </span>
+              <p className="education-duration">2020-2024</p>
+            </div>
+            </div>
+          
+      </section>
       {/* Sidecard */}
       <div className={`sidecard ${isSidecardOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={handleCloseSidecard}>
@@ -85,7 +102,9 @@ const About = () => {
           </div>
         )}
       </div>
-    </div>
+      </div>
+  
+      </div>
     </div>
   );
 };
