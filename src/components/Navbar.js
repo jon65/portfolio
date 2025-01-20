@@ -37,9 +37,13 @@ const Navbar = () => {
         <Link className="et-hero-tab" to="/projects" onClick={toggleMenu}>
           Projects
         </Link>
+          <Link className="et-hero-tab" to="/skills" onClick={toggleMenu}>
+          Skills
+        </Link>
         <Link className="et-hero-tab" to="/contact" onClick={toggleMenu}>
           Contact
         </Link>
+              
       </div>
     </motion.div>
   );

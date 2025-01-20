@@ -3,7 +3,6 @@
   display: flex;
   padding: 0 10%;
     justify-content: center;
-
 }
 .project-header {
   padding: 1% 10%;
@@ -11,4 +10,5 @@
 
 .section-grid {
   padding: 0 10%;
+  padding-bottom: 3%;
 }

@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import TopNavbar from '../components/TopNavbar';
 import space from '../assets/space.png';
+import Skills from '../pages/Skills';
 
 const About = () => {
     const [selectedExperience, setSelectedExperience] = useState(null);
@@ -101,7 +102,8 @@ const About = () => {
             <p>{selectedExperience.details}</p>
           </div>
         )}
-      </div>
+          </div>
+         
       </div>
   
       </div>

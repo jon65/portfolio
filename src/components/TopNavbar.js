@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, Typography, IconButton, Button } from "@mui/material";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const TopNavbar = () => {
   const [bgColor, setBgColor] = useState("transparent");
@@ -33,10 +34,21 @@ const TopNavbar = () => {
           JONNO.
         </Typography>
         <div>
-          <Button color="inherit" style={{ color: textColor }}>Home</Button>
-          <Button color="inherit" style={{ color: textColor }}>About</Button>
-          <Button color="inherit" style={{ color: textColor }}>Projects</Button>
-          <Button color="inherit" style={{ color: textColor }}>Contact</Button>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <Button color="inherit" style={{ color: textColor }}>Home</Button>
+          </Link>
+          <Link to="/about" style={{ textDecoration: 'none' }}>
+            <Button color="inherit" style={{ color: textColor }}>About</Button>
+          </Link>
+          <Link to="/projects" style={{ textDecoration: 'none' }}>
+            <Button color="inherit" style={{ color: textColor }}>Projects</Button>
+          </Link>
+          <Link to="/skills" style={{ textDecoration: 'none' }}>
+            <Button color="inherit" style={{ color: textColor }}>Skills</Button>
+          </Link>
+          <Link to="/contact" style={{ textDecoration: 'none' }}>
+            <Button color="inherit" style={{ color: textColor }}>Contact</Button>
+          </Link>
 
           <IconButton color="inherit" style={{ color: textColor }}>
             <Brightness4Icon />
