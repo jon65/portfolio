@@ -34,12 +34,6 @@ const Navbar = () => {
         <Link className="et-hero-tab" to="/about" onClick={toggleMenu}>
           About
         </Link>
-        <Link className="et-hero-tab" to="/education" onClick={toggleMenu}>
-          Education
-        </Link>
-        <Link className="et-hero-tab" to="/experience" onClick={toggleMenu}>
-          Experience
-        </Link>
         <Link className="et-hero-tab" to="/projects" onClick={toggleMenu}>
           Projects
         </Link>
