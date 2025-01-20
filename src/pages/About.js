@@ -19,19 +19,26 @@ const About = () => {
     setIsSidecardOpen(false);
   };
   const experiences = [
-    {
-      title: 'Frontend Web Developer',
-      company: 'Company Name here',
-      location: 'Bengaluru',
-      type: 'Full Time',
-      duration: 'Sep 2021 - Dec 2021',
+      {
+      title: 'Automation Software Engineer',
+      company: 'Monash Automation',
+      location: 'Clayton, VIC',
+      type: 'Student Team',
+      duration: 'Jul 2023 - Jul 2024',
     },
     {
-      title: 'Internship',
+      title: 'Mobile Application Intern',
+      company: 'Silkron',
+      location: 'Penang, Malaysia',
+      type: 'Internship',
+      duration: 'Sep 2022 - Jan 2023',
+    },
+    {
+      title: 'Mahkota Medical Centre',
       company: 'Company Name here',
       location: 'Bengaluru',
       type: 'Internship',
-      duration: 'Sep 2021 - Dec 2021',
+      duration: 'Jan 2021 - Mar 2021',
     },
   ];
 
@@ -44,8 +51,12 @@ const About = () => {
         <div className="about-section">
           <div className="about-text">
             <h2>About Me</h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quisquam temporibus voluptatibus repellat et obcaecati adipisci.
-          </div>
+              Hello there 👋🏻
+              I'm Jonathan Yip, welcome to my website. 
+            <div>
+              Enjoy learning new technologies and exploring opportunities in web & mobile development, DevOps and security.
+            </div>
+            </div>
           <div className="about-image">
             <img src={space} alt="Space scene" />
           </div>
