@@ -12,7 +12,7 @@ const SkillsPage = () => {
                   <TopNavbar />
 
            <section className="skills-section">
-        <div className="education-cards">
+        <div className="skills-cards">
         <Skills />
             </div>
           
