@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,23 +27,18 @@ const Navbar = () => {
 
       {/* Sidebar Menu */}
       <div className={`et-hero-tabs-container ${isOpen ? "open" : ""}`}>
-        {/* Cancel Button */}
-        {/* <span className="cancel-button" onClick={toggleMenu}>
-          &times;
-        </span> */}
         <Link className="et-hero-tab" to="/about" onClick={toggleMenu}>
           About
         </Link>
         <Link className="et-hero-tab" to="/projects" onClick={toggleMenu}>
           Projects
         </Link>
-          <Link className="et-hero-tab" to="/skills" onClick={toggleMenu}>
+        <Link className="et-hero-tab" to="/skills" onClick={toggleMenu}>
           Skills
         </Link>
         <Link className="et-hero-tab" to="/contact" onClick={toggleMenu}>
           Contact
         </Link>
-              
       </div>
     </motion.div>
   );

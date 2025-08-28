@@ -1,6 +1,5 @@
 /* Default Navbar Styles */
 .navbar {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background-color: #f8f9fa;
@@ -8,160 +7,130 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: center; /* Center-align the navbar */
-    border-radius: 20px; /* Curved edges */
-    overflow: hidden; /* Ensure content doesn't spill over the curved edges */
-}
-
-/* About Me Section */
-.about {
-    display: flex;  /* Use flexbox to align content in a row */
-    flex-wrap: nowrap;  /* Prevent wrapping into multiple rows */
-    justify-content: space-between; /* Space out items equally */
-    width: 100%; /* Ensure it takes up full width */
-}
-
-/* Individual Columns in About Me Section */
-.about > div {
-    flex: 1; /* Make each child element take up equal width */
-    padding: 0.5em; /* Optional: Add padding to columns */
-}
-
-/* Navbar container styles */
-.et-hero-tabs-container {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 0;
-    width: 70%; /* Adjust this value to control the width of the navbar */
-    height: 3em; /* Reduced the height */
-    background-color: #fff;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 10;
-    margin: 0 auto; /* Center the container */
-    border-radius: 20px; /* Curved edges */
-}
-
-/* Navbar tab styles */
-.et-hero-tab {
-    margin: 0.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.875em; /* Reduced font size */
-    flex: 1;
-    color: #333;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    padding: 0.5em; /* Reduced padding */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-/* Hover effect */
-.et-hero-tab:hover {
-    color: #fff;
-    background-color: #6c757d;
-    border-radius: 10px; /* Rounded corners on hover */
-}
-
-/* Hamburger Icon */
-.hamburger {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
     position: absolute;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 0.25em; /* Reduced padding */
+    padding: 0.25em;
     top: 1rem;
     right: 1rem;
-    z-index: 1000;
-}
-
-.hamburger .line {
-    width: 20px; /* Reduced width */
-    height: 2px; /* Reduced height */
+    z-index: 1001;
+  }
+  
+  .hamburger .line {
+    width: 20px;
+    height: 2px;
     background-color: #333;
     margin: 3px 0;
     transition: all 0.3s ease;
-}
-
-.hamburger .line.open {
+  }
+  
+  .hamburger .line.open {
     background-color: #fff;
-}
-
-.hamburger .line:nth-child(1).open {
+  }
+  
+  .hamburger .line:nth-child(1).open {
     transform: translateY(5px) rotate(45deg);
-}
-
-.hamburger .line:nth-child(2).open {
+  }
+  .hamburger .line:nth-child(2).open {
     opacity: 0;
-}
-
-.hamburger .line:nth-child(3).open {
+  }
+  .hamburger .line:nth-child(3).open {
     transform: translateY(-5px) rotate(-45deg);
-}
-
-/* Sidebar Menu for Mobile */
-@media (max-width: 768px) {
+  }
+  
+  /* Navbar Links Container */
+  .et-hero-tabs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    height: 3em;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 10;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+  
+  /* Individual Tab */
+  .et-hero-tab {
+    margin: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875em;
+    flex: 1;
+    color: #333;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .et-hero-tab:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-radius: 10px;
+  }
+  
+  /* ====================
+     Mobile Styles
+  ==================== */
+  @media (max-width: 768px) {
     .hamburger {
-        display: flex;
+      display: flex;
     }
-
+  
     .et-hero-tabs-container {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        background-color: #fff;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-        padding: 1.5em 1em; /* Reduced padding */
-        transition: all 0.3s ease;
-        z-index: 1000;
-        border-radius: 20px; /* Curved edges */
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 75%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-color: #fff;
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+      padding: 2rem 1rem;
+      transition: right 0.3s ease;
+      border-radius: 0;
+      z-index: 1000;
     }
-
+  
     .et-hero-tabs-container.open {
-        right: 0;
+      right: 0;
     }
-
+  
     .et-hero-tab {
-        width: 100%;
-        padding: 0.75em 1.25em; /* Reduced padding */
-        border-bottom: 1px solid #eee;
-        text-align: left;
-        font-size: 0.875em; /* Reduced font size */
+      width: 100%;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+      font-size: 1rem;
     }
-
+  
     .et-hero-tab:last-child {
-        border-bottom: none;
+      border-bottom: none;
     }
-
+  
     .et-hero-tab:hover {
-        background-color: #f7f7f7;
-        border-radius: 10px; /* Rounded corners on hover */
+      background-color: #f7f7f7;
+      border-radius: 10px;
     }
-
-    /* Cancel Button */
-    .cancel-button {
-        display: block;
-        margin-left: auto;
-        margin-bottom: 1rem;
-        font-size: 1rem;
-        font-weight: bold;
-        color: #333;
-        cursor: pointer;
-        transition: color 0.3s ease;
-    }
-
-    .cancel-button:hover {
-        color: #6c757d;
-    }
-}
+  }
+  

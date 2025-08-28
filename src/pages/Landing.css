@@ -1,81 +1,119 @@
 .Landing {
     height: 90vh;
+    width: 100%;
     z-index: 1;
     position: relative;
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    padding: 0 5%; /* Add dynamic horizontal padding */
+    padding: 5%;
     background: linear-gradient(to bottom, #dee2e6, #fff, #e9ecef);
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;    
 }
 
-.Landing h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    letter-spacing: 1rem;
+.Landing-centre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+    width: 100%;
 }
 
-.Landing h3 {
-    font-size: 1.2rem;
-    letter-spacing: 0.3rem;
-    opacity: 0.6;
-}
-
-.banner-logo img {
-    margin: 0.5em 1em;
-    width: 100px;
-    filter: grayscale(100%) brightness(100%);
-}
-
-/* Adjustments for Row Containers */
 .row1 {
     color: black;
     filter: drop-shadow(0px 0px 7px rgba(150, 150, 150, 0.7));
+    word-break: break-word;
+    max-width: 100%;
 }
 
 .row2 {
-    opacity: 1;
+    max-width: 90vw;
+    padding: 0.5rem 1rem;
+    word-break: break-word;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
 }
 
-/* MEDIA QUERIES */
+.Landing h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 0.7rem;
+}
+
+.Landing h3 {
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    opacity: 0.7;
+    line-height: 1.4;
+    word-break: break-word;
+    max-width: 90vw;
+}
+
+/* Banner image */
+.banner-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner-logo img {
+    margin: 1em 0;
+    width: 100px;
+    max-width: 90vw;
+    filter: grayscale(100%) brightness(100%);
+}
+
+/* Responsive media queries */
 @media (max-width: 768px) {
     .Landing {
-        padding: 0 3%; /* Adjust padding */
+        padding: 4%;
     }
 
     .Landing h1 {
-        font-size: 1.8rem;
-        letter-spacing: 0.6rem;
+        font-size: 1.6rem;
+        letter-spacing: 0.5rem;
     }
 
     .Landing h3 {
-        font-size: 1.6rem;
-        letter-spacing: 0.2rem;
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.4;
     }
 
     .banner-logo img {
-        width: 70px; /* Scale down */
-        padding-bottom: 1.5rem;
+        width: 80px;
+        padding-bottom: 1rem;
     }
 }
 
 @media (max-width: 480px) {
+    .Landing {
+        padding: 3%;
+    }
+
     .Landing h1 {
-        font-size: 1.5rem;
-        letter-spacing: 0.4rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.3rem;
     }
 
     .Landing h3 {
-        font-size: 1.4rem;
-        letter-spacing: 0.15rem;
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+        line-height: 1.3;
     }
 
     .banner-logo img {
-        width: 100px; /* Scale down further */
-        padding-bottom: 1rem;
+        width: 60px;
     }
+}
+.typewriter-wrapper {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    padding: 0 1rem;
 }
