@@ -3,13 +3,52 @@
 .contact {
     width: 60%;
     text-align: start;
+    padding: 1%;
+      border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  background-color: #cccccc; /* Greyish background */
+  border: 2px solid #cccccc; /* Set border width and color */
+
+}
+
+.form-control {
+    background: white;
 }
 
 .submit-button {
-    width: 100%;
+    width: 50%;
 }
 
 .contact-container {
     display: flex;
     flex-direction: row;
 }
+
+.background-container {
+  position: relative;
+  background-image: url('../assets/bigwave.png'); /* Set your background image here */
+  background-size: cover;
+  background-position: center;
+  height: 82vh; /* Full viewport height */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  position: relative;
+  z-index: 2; /* Make sure the form appears on top of the background */
+}
+
+.contact-container {
+  z-index: 2; /* Ensure the contact container is above the background */
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+

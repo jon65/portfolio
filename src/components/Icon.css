@@ -1,0 +1,11 @@
+/* styles.css */
+.icon {
+  font-size: 30px;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(2); /* Increased zoom effect */
+  color: #0077b5; /* LinkedIn blue */
+}

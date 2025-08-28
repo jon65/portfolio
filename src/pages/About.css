@@ -1,101 +1,232 @@
-/* Container for the entire about section */
-.about {
+/* Container styling */
+.about-container {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content styling */
+.about-content {
+width: 85%;
+}
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem; /* Spacing between text and image */
+}
+
+/* Text styling */
+.about-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Image container */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Ensures the image stays clipped */
+  border-radius: 15px; /* Rounds edges */
+}
+
+/* Image styling */
+.about-image img {
     width: 80%;
-    align-items: flex-start;
-    font-family: 'Roboto Mono', Helvetica, Arial, sans-serif;
-    color: #000;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Crops the image to fit the container */
+  clip-path: circle(50% at center); /* Creates a circular crop */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover effect */
 }
 
-/* Bio section with the text content */
-.bio {
-    display: flex;
-    color: black;
-    margin-right: 2em;
-    font-size: 14px;
+/* Hover effect */
+.about-image img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+  opacity: 0.9; /* Subtle fade */
 }
 
-/* Links section with the socials */
-.links {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: flex-start;
-}
-
-/* Flex container for social links */
-.social-link-row {
-    display: flex;
-    align-items: center;
-    margin-top: 0.5em;
-}
-
-.landing--social {
-    font-size: 14px;
-    color: black;
-    margin-right: 10px;
-}
-
-/* Inline container for the resume button */
-.inline-container {
-    display: flex;
-    align-items: center;
-}
-
-.inline-container p {
-    margin: 0;
-    color: black;
-}
-
-.btn-1 {
-    margin-left: 1.5em;
-}
-
-/* Body text styles */
-body, p {
-    letter-spacing: .8px;
-    line-height: 25px;
-    color: #6c757d;
-}
-
-/* Row styles */
-.row {
-    margin-right: 1em;
-    padding-right: 1em;
-    border-right: 1px solid #000;
-    text-align: start;
-}
-
-.row-doing {
-    padding-top: 0.5em;
-}
-
-.row-pad {
-    padding-top: 0.7em;
-}
-
-/* Header styles */
-.header {
-    padding-top: 1em;
-    text-align: start;
-    font-size: 14px;
-}
-
-/* Responsive design */
 @media (max-width: 768px) {
-   
-    /* Row styles */
-    .row {
-        margin-right: 1em;
-        padding-right: 1em;
-        border-right: 0 solid #000;
-        text-align: start;
-    }
-    .bio {
-        flex-direction: column; /* Remove margin on mobile */
-        width: 100%; /* Full width on mobile */
-        margin: 0;
-    }
-    .about {
-        width: 95%;
-    }
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    width: 80%;
+  }
+}
+
+/* General styling */
+.about-container {
+  padding: 2rem;
+}
+
+.experience-section {
+  margin-bottom: 2rem;
+}
+
+.experience-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.experience-card {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.experience-card:hover {
+  background-color: #f9f9f9;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.experience-type {
+  background: #d4edda;
+  color: #155724;
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.experience-company,
+.experience-duration {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+}
+
+/* Sidecard styling */
+.sidecard {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Hidden initially */
+  width: 300px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  padding: 1rem;
+  z-index: 30000;
+  overflow-y: auto;
+}
+
+.sidecard.open {
+  right: 0; /* Slide in when open */
+}
+
+.sidecard .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidecard-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sidecard-content h4 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #555;
+}
+
+.sidecard-content p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+/* Backdrop overlay */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Dull effect */
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px); /* Blurs the background slightly */
+  z-index: 999; /* Ensure it's below the sidecard */
+  display: none; /* Hidden by default */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth fade-in/out */
+}
+
+.backdrop.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Blur effect for main content */
+.about-container.blur {
+  filter: blur(5px); /* Applies blur to the content */
+  pointer-events: none; /* Disable interactions with the content */
+  -webkit-user-select: none;
+  user-select: none; /* Disable text selection */
+  transition: filter 0.3s ease; /* Smooth transition */
+}
+
+
+.education-card {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.experience-cards,
+.education-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.education-section {
+  margin-bottom: 2rem;
+}
+.education-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.education-content {
+    display: flex;
+  justify-content: space-between;
+
+}
+
+.education-content education-duration {
+    width: 100%;
+    text-align: start;
 }

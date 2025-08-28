@@ -1,6 +1,7 @@
-import './Navbar.css';
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import "./Navbar.css";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,21 +11,36 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
+    <motion.div
+      initial={{ y: +80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.5 }}
+      className="navbar"
+    >
+      {/* Hamburger Icon */}
       <div className="hamburger" onClick={toggleMenu}>
-        <div className={`line ${isOpen ? 'open' : ''}`}></div>
-        <div className={`line ${isOpen ? 'open' : ''}`}></div>
-        <div className={`line ${isOpen ? 'open' : ''}`}></div>
+        <div className={`line ${isOpen ? "open" : ""}`}></div>
+        <div className={`line ${isOpen ? "open" : ""}`}></div>
+        <div className={`line ${isOpen ? "open" : ""}`}></div>
       </div>
-      <div className={`et-hero-tabs-container ${isOpen ? 'open' : ''}`}>
-        <a className="et-hero-tab" href="#about">About Me</a>
-        <a className="et-hero-tab" href="#education">Education</a>
-        <a className="et-hero-tab" href="#experience">Experience</a>
-        <a className="et-hero-tab" href="#project">Projects</a>
-        <a className="et-hero-tab" href="#contact">Contact</a>
-        <span className="et-hero-tab-slider"></span>
+
+      {/* Sidebar Menu */}
+      <div className={`et-hero-tabs-container ${isOpen ? "open" : ""}`}>
+        <Link className="et-hero-tab" to="/about" onClick={toggleMenu}>
+          About
+        </Link>
+        <Link className="et-hero-tab" to="/projects" onClick={toggleMenu}>
+          Projects
+        </Link>
+        <Link className="et-hero-tab" to="/skills" onClick={toggleMenu}>
+          Skills
+        </Link>
+        <Link className="et-hero-tab" to="/contact" onClick={toggleMenu}>
+          Contact
+        </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

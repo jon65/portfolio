@@ -1,32 +1,30 @@
-import './App.css';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Landing from './pages/Landing';
 import Navbar from './components/Navbar';
 import About from './pages/About';
-import Experience from './pages/Experience';
-import Education from './pages/Education';
 import Project from './pages/Project';
-import Skills from './pages/Skills';
-// import Contact from './pages/Contact';
+import Contact from './pages/Contact';
+import SkillsPage from './pages/Skills';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <Landing />
-      <Navbar />
-      {/* <div className="container-app"> */}
-      <About />
-      {/* <Education/>
-      <Skills/>
-      <Experience />
-      <Project />
-      <Contact />
-      </div> */}
-    {/* <footer className="footer-container">
-        <p className="footer">Fueled by coffee and big dreams ;D</p>
-        <p className="footer">
-          &copy; Jonathan Yip 2024
-        </p>
-    </footer> */}
+    <div>
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Project />} />
+          <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/contact" element={<Contact />} />
+
+        </Routes>
+      </Router>
+      <Footer />
     </div>
   );
 }

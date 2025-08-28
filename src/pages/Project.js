@@ -1,85 +1,59 @@
 import React, { useEffect, useState } from 'react';
 import './project.css'
-const Project = () => { 
+import TopNavbar from '../components/TopNavbar';
+import ProjectCard from '../components/ProjectCard';
+import ninemansmorris from '../assets/ninemansmorris.png';
+import qkshare from '../assets/qkshare.png';
+import balance from '../assets/balance-logo.png';
+import campside from '../assets/campsideReview.png';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid2';
 
-    return (
-        <div className="container" id="project">
-            <h2 className="section-header">
-                PROJECTS
-            </h2>
-            <div>
-                
-<ul class="cards">
-  <li class="cards__item">
-    <div class="card">
-      <div class="card__image card__image--fence"></div>
-      <div class="card__content">
-        <div class="card__title">Nine Mans Morris</div>
-                  <p class="card__text">
-                    Made an online version of the board game Nine Mans Morris game using JavaFX. This game can be played
-among 2 players and includes a step by step walk through tutorial of the game.
-                  </p>
-                              <a href="https://github.com/jon65/Nine-Mans-Morris" target="_blank" rel="noopener noreferrer">
+const Project = () => {
+  return (
+    <div id="">
+          <TopNavbar />
+          <div className="section-grid">
+       
+          <Grid
+              container
+              spacing={2}
+              justifyContent="center" // Center horizontally
+              alignItems="center" // Center vertically
+              
+              >   <Grid size={12}>
+                      <div className="section">
+                          
+    <h2 style={{   margin: "0",
+  }}>Projects</h2>
+                      </div>
+  </Grid>
+                  
+                  <Grid size={{xs:12, sm:6, md:4}}>
+                      <ProjectCard repoUrl={"https://github.com/jon65/Nine-Mans-Morris"} title={"Nine Mans Morris"} description={"Implementation of Nine Mans Morris using JavaFX framework"} image={ninemansmorris} />
+                      
+  </Grid>
+  <Grid size={{xs:12, sm:6, md:4}}>
+                      <ProjectCard repoUrl={"https://github.com/Monash-FIT3170/BaLance-Team-Forming-Dashboard"} title={"Balance Team Formation"} description={"Team formation tool built for teaching staff that groups students based on various metrics"} image={ balance} />
+  </Grid>
+  <Grid size={{xs:12, sm:6, md:4}}>
+                      <ProjectCard  repoUrl={"https://github.com/jon65?tab=repositories"}  title={"Campside Review"} description={"full stack Javascript application that allows users to review and comment campsites."} image={campside} />
+  </Grid>
+  <Grid size={{xs:12, sm:6, md:4}}>
+                      <ProjectCard repoUrl={"https://github.com/jon65/quickShare"} title={"QuickShare"} description={"Uploads and download files without authentication using a one-time generated code"} image={ qkshare} />
+                  </Grid>
+                    <Grid size={{xs:12, sm:6, md:4}}>
+                  </Grid>
+                    <Grid size={{xs:12, sm:6, md:4}}>
+                  </Grid>
+</Grid>
+          </div>
+          </div>
 
-                    <button type="button" class="btn btn-outline-secondary">View Repository</button>
-                    </a>
 
-      </div>
-    </div>
-  </li>
-  <li class="cards__item">
-    <div class="card">
-      <div class="card__image card__image--river"></div>
-      <div class="card__content">
-        <div class="card__title">Fire hotspot</div>
-                  <p class="card__text">
-Created a weather reporting simulation app detecting Australian fires. Processed incoming stream data in
-10-second batches, identifying fires, causes, and sources. Utilized PySpark, Apache Kafka, and MongoDB for
-data processing and storage, with visualization via matplotlib and geomap. Enabled live climate data display,
-                    charts, and a geomap of recorded fires.                  </p>
-            <a href="https://github.com/jon65/SparkStreaming_fire_hotspots_datapipeline" target="_blank" rel="noopener noreferrer">
-                  <button type="button" class="btn btn-outline-secondary">View Repository</button>
-                  </a>
-      </div>
-    </div>
-  </li>
-  <li class="cards__item">
-    <div class="card">
-      <div class="card__image card__image--record"></div>
-      <div class="card__content">
-        <div class="card__title">CampsideReview</div>
-                  <p class="card__text">
-A full stack web application for posting reviews on campsites around the world. Users can rate an existing
-campsite, leave their own reviews and upload a new campsite together with their review if the campsite does
-not exist                  </p>
-                  <a href="https://github.com/jon65/CampsideReview" target="_blank" rel="noopener noreferrer">
-                  <button type="button" class="btn btn-outline-secondary">View Repository</button>
-</a>
-      </div>
-    </div>
-  </li>
-  <li class="cards__item">
-    <div class="card">
-      <div class="card__image card__image--flowers"></div>
-      <div class="card__content">
-        <div class="card__title">BaLance</div>
-                  <p class="card__text">
-As part of a full year project with other students, we developed a tool for assisting tutors to create well
-        balanced student groups. The application creates groups based on factors such as personality types, academic
-        performance, and commitment hours that can be uploaded as a CSV file. Additionally, students have the
-                    option to upload custom python scripts to perform personalised student groupings.
-                  </p>
-                                    <a href="https://github.com/Monash-FIT3170/BaLance-Team-Forming-Dashboard?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">
-
-                    <button type="button" class="btn btn-outline-secondary">View Repository</button>
-                    </a>
-      </div>
-    </div>
-  </li>
-</ul>
-           </div>
-        </div>
-    );
-}
+  );
+};
 
 export default Project;

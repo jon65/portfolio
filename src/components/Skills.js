@@ -28,9 +28,8 @@ const Skills = () => {
 
     return (
         <div className="container" id="skills">
-            <h2 className="section-header">
-                SKILLS
-            </h2>
+              <h2>Technologies I have used....</h2>
+
             <div className="skillsContainer">
             <div className="skill--box">
                     <img className="" src={aws} alt="" />
