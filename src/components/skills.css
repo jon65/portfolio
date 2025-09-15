@@ -1,26 +1,26 @@
-
 .skillsContainer {
   display: flex;
-    flex-wrap: wrap;
-
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: start;
+  justify-content: center; /* center boxes for better symmetry */
   width: 100%;
   margin-top: 1rem;
+  gap: 1rem; /* use gap instead of margin for cleaner spacing */
 }
 
 .skill--box {
   background: #fafafa;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
   border-radius: 10px;
-  width: 100px;
-  height: 100px;
-  margin: 1rem;
+  flex: 1 1 120px;  /* flexible sizing: min 120px wide */
+  max-width: 180px; /* prevent oversized on wide screens */
+  aspect-ratio: 1 / 1; /* keeps it square instead of fixed height */
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 10px;
+  padding: 1rem;
   transition: 300ms ease-in-out;
 }
 
@@ -29,69 +29,60 @@
 }
 
 .skill--box > img {
-  height: 40px;
+  height: 50px;   /* default size for desktop */
+  width: auto;
   pointer-events: none;
 }
 
 .skill--box h3 {
-  /* font-family: Big Shoulders Text; */
-  font-style: normal;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
 }
 
 
+/* Tablet */
 @media screen and (max-width: 992px) {
-  .skills {
-    padding: 1rem;
-    min-height: 100%;
-  }
   .skillsContainer {
     padding: 1rem;
-    margin: 1rem 0;
-  }
-  .skillsHeader h2 {
-    font-size: 3.2rem;
-  }
-  .skill--box {
-    width: 150px;
-    height: 150px;
-    margin: 1.2rem;
-    padding: 2rem 1rem;
-  }
-
-  .skill--box > img {
-    height: 45px;
-  }
-
-  .skill--box h3 {
-    font-size: 20px;
-    margin-top: 1rem;
-  }
-}
-
-
-@media screen and (max-width: 600px) {
-  .skill--box {
-    width: 135px;
-    height: 135px;
-    margin: 1.2rem;
-    padding: 2rem 1rem;
-  }
-
-  .skill--box > img {
-    height: 40px;
+    gap: 2rem;
   }
 
   .skillsHeader h2 {
     font-size: 2.5rem;
   }
 
+  .skill--box {
+    flex: 1 1 140px;
+    max-width: 160px;
+  }
+
+  .skill--box > img {
+    height: 40px; /* smaller icons */
+  }
+
   .skill--box h3 {
-    font-size: 18px;
-    margin-top: 1rem;
+    font-size: 1.1em;
   }
 }
 
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .skillsHeader h2 {
+    font-size: 2rem;
+  }
+
+  .skill--box {
+    flex: 1 1 45%; /* two per row */
+    max-width: 45%;
+  }
+
+  .skill--box > img {
+    height: 30px; /* smallest icons */
+  }
+
+  .skill--box h3 {
+    font-size: 0.9em;
+  }
+}
