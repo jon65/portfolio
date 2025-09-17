@@ -1,0 +1,107 @@
+theme-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .theme-toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: rotate(20deg);
+  }
+  
+  .dark .theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+
+
+/* Mobile top bar styles */
+.navbar-mobile-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: var(--bg-primary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0 20px;
+  }
+  
+  .mobile-top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+  }
+  
+  /* Desktop navbar with theme toggle */
+  .et-hero-tabs-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Dark mode root variables */
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --border-color: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Apply theme colors to navbar elements */
+  .navbar,
+  .navbar-mobile-top,
+  .mobile-bottom-nav {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+  
+  .et-hero-tab,
+  .bottom-nav-item {
+    color: var(--text-secondary);
+  }
+  
+  .et-hero-tab:hover,
+  .et-hero-tab.active,
+  .bottom-nav-item:hover,
+  .bottom-nav-item.active {
+    color: var(--text-primary);
+  }
+  
+  .mobile-bottom-nav {
+    border-top: 1px solid var(--border-color);
+  }
+  
+  /* Smooth transitions for theme changes */
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  

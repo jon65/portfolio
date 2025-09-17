@@ -55,6 +55,9 @@ const TopNavbar = () => {
       }
     };
 
+
+
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -171,145 +174,96 @@ const TopNavbar = () => {
     </Box>
   );
 
-  // Mobile Drawer
+  
   const MobileDrawer = () => (
     <Drawer
-      anchor="top"
+      anchor="left"
       open={mobileMenuOpen}
       onClose={handleMobileMenuClose}
       sx={{
         '& .MuiDrawer-paper': {
           width: '100%',
           height: '100vh',
-          background: 'rgba(44, 44, 44, 0.95)',
-          backdropFilter: 'blur(10px)',
+          background: 'rgba(0, 0, 0, 0.95)',
           color: 'white',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: 0
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          p: 4,
+          animation: mobileMenuOpen ? 'fadeIn 0.4s ease' : 'none',
         },
-        '& .MuiBackdrop-root': {
-          backgroundColor: 'rgba(0, 0, 0, 0.7)',
-          backdropFilter: 'blur(8px)'
-        }
+        '@keyframes fadeIn': {
+          '0%': { opacity: 0, transform: 'translateX(-100%)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
       }}
     >
       {/* Logo at top */}
-      <Box sx={{ 
-        position: 'absolute', 
-        top: 60, 
-        textAlign: 'center' 
-      }}>
-        <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
-          JONNO.
-        </Typography>
-      </Box>
-      
-      {/* Centered Navigation Items */}
-      <Box sx={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center', 
-        gap: 3,
-        flex: 1,
-        justifyContent: 'center',
-        width: '100%',
-        maxWidth: 400
-      }}>
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: 'bold', mb: 6 }}
+        component={Link}
+        to="/"
+        onClick={handleMobileMenuClose}
+        style={{ textDecoration: 'none', color: 'white' }}
+      >
+        JONNO.
+      </Typography>
+  
+      {/* Nav Items */}
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 3,
+          width: '100%',
+        }}
+      >
         {navItems.map((item, index) => (
-          <Box
+          <Typography
             key={item.path}
             component={Link}
             to={item.path}
             onClick={handleMobileMenuClose}
             sx={{
-              color: 'white',
+              color: isActivePage(item.path) ? 'white' : '#999',
               textDecoration: 'none',
-              py: 2,
-              px: 6,
-              borderRadius: 4,
-              transition: 'all 0.4s ease',
-              backgroundColor: isActivePage(item.path) 
-                ? 'rgba(255, 255, 255, 0.2)' 
-                : 'rgba(255, 255, 255, 0.05)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              minWidth: 250,
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              animation: mobileMenuOpen ? `slideInScale 0.5s ease ${index * 0.1}s both` : 'none',
-              '&:hover': {
-                backgroundColor: 'rgba(255, 255, 255, 0.15)',
-                transform: 'translateY(-5px) scale(1.05)',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-                border: '1px solid rgba(255, 255, 255, 0.3)'
+              fontSize: '1.5rem',
+              fontFamily: 'monospace',
+              transition: 'color 0.3s',
+              '&:hover': { color: 'white' },
+              animation: mobileMenuOpen
+                ? `slideIn 0.5s ease ${index * 0.1}s both`
+                : 'none',
+              '@keyframes slideIn': {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
               },
-              '@keyframes slideInScale': {
-                '0%': {
-                  opacity: 0,
-                  transform: 'translateY(30px) scale(0.8)'
-                },
-                '100%': {
-                  opacity: 1,
-                  transform: 'translateY(0) scale(1)'
-                }
-              }
             }}
           >
-            <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
-              {item.icon}
-            </Box>
-            <Typography
-              sx={{
-                fontWeight: isActivePage(item.path) ? 600 : 400,
-                fontSize: '1.2rem',
-                textAlign: 'center'
-              }}
-            >
-              {item.label}
-            </Typography>
-          </Box>
+            <span style={{ color: '#bbb', marginRight: 8 }}>
+              {String(index + 1).padStart(2, '0')}
+            </span>
+            : {item.label}
+          </Typography>
         ))}
       </Box>
-
-      {/* Cancel Button at Bottom */}
-      <Box sx={{ 
-        position: 'absolute', 
-        bottom: 40, 
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center'
-      }}>
-        <IconButton
-          onClick={handleMobileMenuClose}
-          sx={{
-            color: 'white',
-            border: '2px solid rgba(255, 255, 255, 0.3)',
-            width: 56,
-            height: 56,
-            borderRadius: '50%',
-            transition: 'all 0.3s ease',
-            '&:hover': {
-              borderColor: 'rgba(255, 255, 255, 0.6)',
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              transform: 'translateY(-2px) scale(1.1)',
-              '& .MuiSvgIcon-root': {
-                transform: 'rotate(90deg)'
-              }
-            },
-            '& .MuiSvgIcon-root': {
-              fontSize: '1.5rem',
-              transition: 'transform 0.3s ease'
-            }
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-      </Box>
+  
+      {/* Close Button at Bottom */}
+      <Box sx={{ flexGrow: 1 }} />
+      <IconButton
+        onClick={handleMobileMenuClose}
+        sx={{
+          color: '#bbb',
+          '&:hover': { color: 'white' },
+        }}
+      >
+        <CloseIcon fontSize="large" />
+      </IconButton>
     </Drawer>
   );
+  
 
   return (
     <>
