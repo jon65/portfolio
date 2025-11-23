@@ -1,0 +1,7 @@
+# Copy this file to terraform.tfvars and update with your values
+# terraform.tfvars is ignored by git for security
+
+aws_region  = "ap-southeast-1"
+bucket_name = "v3.jonnoyip.com"  # Must be globally unique
+environment = "prod"
+

@@ -1,0 +1,17 @@
+# Cloudflare Deployment Configuration
+# Copy this file to terraform.cloudflare.tfvars and update with your values
+# terraform.cloudflare.tfvars is ignored by git for security
+
+# IMPORTANT: Use us-east-1 for CloudFront when using ACM certificates
+aws_region  = "us-east-1"
+bucket_name = "your-bucket-name"  # Must be globally unique
+environment = "prod"
+
+# Your Cloudflare-managed domain
+domain_name = "example.com"
+
+# ACM Certificate ARN (request this in AWS Certificate Manager first)
+# Must be in us-east-1 region
+# See CLOUDFLARE_SETUP.md for instructions on requesting the certificate
+acm_certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/abc123..."
+
