@@ -1,12 +1,16 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import './Icon.css';
+import { personalInfo } from '../data/portfolioData';
+
 const Socials = () => {
+  const { socialLinks } = personalInfo;
+  
   return (
     <div style={styles.container}>
       <a
         className="icon"
-        href="https://github.com/jon65"
+        href={socialLinks.github}
         target="_blank"
         rel="noreferrer"
         style={styles.iconLink}
@@ -15,7 +19,7 @@ const Socials = () => {
       </a>
       <a
         className="icon"
-        href="https://www.linkedin.com/in/jon65"
+        href={socialLinks.linkedin}
         target="_blank"
         rel="noreferrer"
         style={styles.iconLink}
@@ -24,7 +28,7 @@ const Socials = () => {
       </a>
       <a 
         className="icon"
-        href="mailto:your-email@example.com"
+        href={`mailto:${socialLinks.email}`}
         target="_blank"
         rel="noreferrer"
         style={styles.iconLink}

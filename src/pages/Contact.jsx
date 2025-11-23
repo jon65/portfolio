@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './contact.css';
 import TopNavbar from '../components/TopNavbar';
+import { contactData } from '../data/portfolioData';
 
 const Contact = () => { 
   const [formStatus, setFormStatus] = useState('Send');
@@ -12,10 +13,10 @@ const Contact = () => {
 
     // Pass the form element directly
     emailjs.sendForm(
-      'service_4sjybl7',
-      'template_ze9s9uk',
+      contactData.emailjs.serviceId,
+      contactData.emailjs.templateId,
       e.target, // Pass the form element here
-      '8HRy2yhXS3ijDqrUm'
+      contactData.emailjs.publicKey
     )
     .then(
       (result) => {
@@ -41,15 +42,15 @@ const Contact = () => {
               <h2 style={{textAlign: "center"}} className="section-header">Contact Me</h2>
             <form onSubmit={onSubmit}>
               <div className="mb-3">
-                <label className="form-label" htmlFor="name">Name</label>
+                <label className="form-label" htmlFor="name">{contactData.formLabels.name}</label>
                 <input className="form-control" type="text" id="name" name="name" required />
               </div>
               <div className="mb-3">
-                <label className="form-label" htmlFor="email">Email</label>
+                <label className="form-label" htmlFor="email">{contactData.formLabels.email}</label>
                 <input className="form-control" type="email" id="email" name="email" required />
               </div>
               <div className="mb-3">
-                <label className="form-label" htmlFor="message">Message</label>
+                <label className="form-label" htmlFor="message">{contactData.formLabels.message}</label>
                 <textarea className="form-control" id="message" name="message" required />
               </div>
               <button className="btn btn-success submit-button" type="submit">

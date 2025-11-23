@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import TopNavbar from '../components/TopNavbar';
 import space from '../assets/space.png';
 import Skills from '../pages/Skills';
+import { aboutData } from '../data/portfolioData';
 
 const About = () => {
     const [selectedExperience, setSelectedExperience] = useState(null);
@@ -18,29 +19,8 @@ const About = () => {
   const handleCloseSidecard = () => {
     setIsSidecardOpen(false);
   };
-  const experiences = [
-      {
-      title: 'Automation Software Engineer',
-      company: 'Monash Automation',
-      location: 'Clayton, VIC',
-      type: 'Student Team',
-      duration: 'Jul 2023 - Jul 2024',
-    },
-    {
-      title: 'Mobile Application Intern',
-      company: 'Silkron',
-      location: 'Penang, Malaysia',
-      type: 'Internship',
-      duration: 'Sep 2022 - Jan 2023',
-    },
-    {
-      title: 'Mahkota Medical Centre',
-      company: 'Company Name here',
-      location: 'Bengaluru',
-      type: 'Internship',
-      duration: 'Jan 2021 - Mar 2021',
-    },
-  ];
+  
+  const { experiences, education, aboutText } = aboutData;
 
   return (
     <div>
@@ -51,10 +31,12 @@ const About = () => {
         <div className="about-section">
           <div className="about-text">
             <h2>About Me</h2>
-              Hello there 👋🏻
-              I'm Jonathan Yip, welcome to my website. 
             <div>
-              Enjoy learning new technologies and exploring opportunities in web & mobile development, DevOps and security.
+              {aboutText.greeting}<br />
+              {aboutText.introduction}
+            </div>
+            <div>
+              {aboutText.description}
             </div>
             </div>
           <div className="about-image">
@@ -88,17 +70,18 @@ const About = () => {
         <section className="education-section">
         <h2>Education</h2>
         <div className="education-cards">
-        
+          {education.map((edu, index) => (
+            <div key={index}>
               <div className="education-header">
-                <h6>Monash University</h6>
+                <h6>{edu.institution}</h6>
+              </div>
+              <div className="education-content">
+                <span className="education-type">{edu.degree}</span>
+                <p className="education-duration">{edu.duration}</p>
+              </div>
             </div>
-            <div className="education-content">
-
-                <span className="education-type">Bachalor of Engineering (Honours) Software </span>
-              <p className="education-duration">2020-2024</p>
-            </div>
-            </div>
-          
+          ))}
+        </div>
       </section>
       {/* Sidecard */}
       <div className={`sidecard ${isSidecardOpen ? "open" : ""}`}>
@@ -110,7 +93,11 @@ const About = () => {
             <h3>{selectedExperience.title}</h3>
             <h4>{selectedExperience.company}</h4>
             <p>{selectedExperience.duration}</p>
-            <p>{selectedExperience.details}</p>
+            <ul className="experience-details-list">
+              {selectedExperience.details.map((detail, index) => (
+                <li key={index}>{detail}</li>
+              ))}
+            </ul>
           </div>
         )}
           </div>

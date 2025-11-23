@@ -2,44 +2,16 @@ import React, { useEffect, useState } from 'react';
 import './project.css'
 import TopNavbar from '../components/TopNavbar';
 import ProjectCard from '../components/ProjectCard';
-import ninemansmorris from '../assets/ninemansmorris.png';
-import qkshare from '../assets/qkshare.png';
-import balance from '../assets/balance-logo.png';
-import campside from '../assets/campsideReview.png';
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Grid from '@mui/material/Grid2';
+import { projectsData } from '../data/portfolioData';
 
 const Project = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
 
-  const projects = [
-    {
-      repoUrl: "https://github.com/jon65/Nine-Mans-Morris",
-      title: "Nine Mans Morris",
-      description: "Implementation of Nine Mans Morris using JavaFX framework",
-      image: ninemansmorris
-    },
-    {
-      repoUrl: "https://github.com/Monash-FIT3170/BaLance-Team-Forming-Dashboard",
-      title: "Balance Team Formation",
-      description: "Team formation tool built for teaching staff that groups students based on various metrics",
-      image: balance
-    },
-    {
-      repoUrl: "https://github.com/jon65?tab=repositories",
-      title: "Campside Review",
-      description: "Full stack Javascript application that allows users to review and comment campsites.",
-      image: campside
-    },
-    {
-      repoUrl: "https://github.com/jon65/quickShare",
-      title: "QuickShare",
-      description: "Uploads and download files without authentication using a one-time generated code",
-      image: qkshare
-    }
-  ];
+  const projects = projectsData;
 
   return (
     <Box className="project-page">
