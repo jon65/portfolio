@@ -11,7 +11,7 @@
     text-align: center;
     padding: 5%;
     background: linear-gradient(to bottom, #dee2e6, #fff, #e9ecef);
-    min-height: 100vh;
+    min-height: 90vh;
     overflow-x: hidden;
     overflow-y: auto;    
 
@@ -118,3 +118,19 @@
     overflow-wrap: break-word;
     padding: 0 1rem;
 }
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    }
+    70% {
+      transform: scale(1.15);
+      box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  

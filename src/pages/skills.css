@@ -1,15 +1,48 @@
-
-
 .skills-section {
-    display: flex;
-      padding: 0 10%;
-    justify-content: center;
-        align-items: center;
-
-  height: 82vh;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  min-height: 82vh; /* use min-height instead of fixed height */
 }
 
+.skills-cards {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Ensure individual card sizing */
 .skills-card {
-  height: 100%;
+  flex: 1 1 250px; /* grow/shrink with a minimum size */
+  max-width: 400px;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .skills-section {
+    padding: 0 5%;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    flex-direction: column;
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .skills-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-card {
+    width: 100%;
+    max-width: 90%;
+  }
 }
